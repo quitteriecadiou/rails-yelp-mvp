@@ -17,8 +17,22 @@
   <div class="reviews">
     <h4>Reviews</h4>
     <hr>
-    <div class="review">
-
+    <div class="create-review">
+      <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+      <%= render 'form_review' %>
     </div>
+    <br>
+    <% @restaurant.reviews.each do |review| %>
+      <div class="review">
+        <% review.rating.times do %>
+          <i class="far fa-lemon rating-positive"></i>
+        <% end %>
+        <% (5 - review.rating).times do %>
+          <i class="far fa-lemon rating-negative"></i>
+        <% end %>
+        <p><%= review.content %></p>
+        <br>
+      </div>
+    <% end %>
   </div>
 </div>
