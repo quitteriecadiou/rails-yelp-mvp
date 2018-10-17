@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Restaurants</h1>
+  <div class="row">
+    <div class="col-xs-3">
+      <ul class="list-group">
+        <% @restaurants.each do |restaurant| %>
+          <div class="list-restaurant">
+            <%= link_to restaurant_path(restaurant) do %>
+              <li class="list-group-item">
+                <i class="far fa-lemon list-item-decoration"></i> <%= restaurant.name %>
+              </li>
+            <% end %>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

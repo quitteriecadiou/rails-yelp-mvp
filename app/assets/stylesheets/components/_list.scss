@@ -1,0 +1,13 @@
+.list-restaurant a {
+  color: #616668;
+}
+
+.list-restaurant a:hover {
+  color: $yellow;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.list-item-decoration {
+  color: $yellow;
+}
